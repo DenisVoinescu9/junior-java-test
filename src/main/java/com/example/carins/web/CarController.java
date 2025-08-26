@@ -19,11 +19,6 @@ public class CarController {
         this.service = service;
     }
 
-    @GetMapping("/test")
-    public String test() {
-        return "/API working";
-    }
-
     @GetMapping("/cars")
     public List<CarDto> getCars() {
         return service.listCars().stream().map(this::toDto).toList();

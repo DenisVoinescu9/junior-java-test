@@ -34,7 +34,6 @@ public class CarService {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Car not found");
 
 
-
         return policyRepository.existsActiveOnDate(carId, date);
     }
 }
